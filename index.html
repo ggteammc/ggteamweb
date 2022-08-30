@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>GGTeam mc服务器 开服倒计时[UTC+8]</title>
+</head>
+
+<body>
+<img src="https://s1.328888.xyz/2022/08/30/CvXF6.png" style="width: 128px;height:128px"/>
+	<font size="14">GGTeam mc服务器 开服倒计时</font>
+	<p><font size="8">时区：</font> <font size="8"><font color="red">[UTC+8]</font></font></p>
+        <style>
+            input {
+                width: 40px;
+                height: 20px;
+            }
+            #remainTime{
+                background-color: rgba(95, 98, 103, 0.333);
+                margin-top: 30px;
+                font-size: 40px;
+                text-align: center;
+
+            }
+            #remainTime span {
+                color: red;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        </style>
+</body>
+<body>
+    <div id="remainTime">
+    <p><font size="5"><font color="light_blue">中文[Chinese]</font></font></p>
+    <p><font size="6">距离2023年5月1日15时还有：</font></p>
+        <span id="one"></span>天
+        <span id="two"></span>时
+        <span id="three"></span>分
+        <span id="four"></span>秒
+    </div>
+</body>
+<script>
+        (function show() {      
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 5
+            var oDay = 1
+            var oHour = 15
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;          
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }  
+        })()
+        //格式化日期格式 2
+        function dateFormat(data){
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+  </script>
+          <style>
+            input {
+                width: 40px;
+                height: 20px;
+            }
+            #remainTime{
+                background-color: rgba(95, 98, 103, 0.333);
+                margin-top: 30px;
+                font-size: 40px;
+                text-align: center;
+
+            }
+            #remainTime span {
+                color: red;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        </style>
+</head>
+<body>
+    <div id="remainTime">
+        <p><font size="5"><font color="light_blue">English[英语]</font></font></p>
+        <p><font size="6">By 15:00 on May 1, 2023, there are still</font></p>
+        <span id="five"></span>day(s)
+        <span id="six"></span>hour(s)
+        <span id="seven"></span>minute(s)
+        <span id="eight"></span>second(s)
+    </div>
+</body>
+<script>
+        (function show() {      
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 5
+            var oDay = 1
+            var oHour = 15
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;          
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('five').innerHTML = day;
+                document.getElementById('six').innerHTML = hour;
+                document.getElementById('seven').innerHTML = minute;
+                document.getElementById('eight').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }  
+        })()
+        //格式化日期格式 2
+        function dateFormat(data){
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+  </script>
+</html>
